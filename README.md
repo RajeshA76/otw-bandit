@@ -56,8 +56,7 @@ The password for the next level is stored in the only human-readable file in the
 
 * Username: bandit5
 * Method for finding password for bandit5:
-	*cmd used: file ~/inhere/-*
-
+	*cmd used: file ~/inhere/* 
 * Password: koReBOKuIDDepwhWk7jZC0RTdopnAYKh
 
 ## Level 5-6
@@ -70,7 +69,7 @@ The password for the next level is stored in a file somewhere under the inhere d
 
 * Username: bandiit6
 * Method for finding password for bandit6:
-        *cmd used: find /home/bandit5/inhere/ -type f -size 1033c
+	* cmd used: find /home/bandit5/inhere/ -type f -size 1033c
 
 * Password: DXjZPULLxYr17uwoI01bNLQbtFemEgo7
 
@@ -84,7 +83,7 @@ The password for the next level is stored somewhere on the server and has all of
 
 * Username: bandiit7
 * Method for finding password for bandit7:
-        *cmd used: find / -user bandit7 -group bandit6 -type f -size 33c
+	* cmd used: find / -user bandit7 -group bandit6 -type f -size 33c
 
 * Password: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
 
@@ -94,12 +93,22 @@ The password for the next level is stored in the file data.txt next to the word 
 
 * Username: bandiit8
 * Method for finding password for bandit8:
-        *cmd used: cat data.txt | grep "millionth"
+	* cmd used: cat data.txt | grep "millionth"
 
 * Password: cvX2JJa4CFALtqS87jk27qwqGhBM9plV
 
 ## Level 8-9
 
 The password for the next level is stored in the file data.txt and is the only line of text that occurs only once
+
+* Username: bandit9
+* Method for finding password for bandit 9:
+	* cmd used: sort data.txt | uniq -c | grep "1\ "
+	* Explanation: 
+		* Sort the line of text in the file
+		* apply uniq -c to count the no of times line of text occurs in the file
+		* Using Grep to filter out count 1 
+
+* Password: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
 
 
