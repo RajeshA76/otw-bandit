@@ -52,4 +52,54 @@ The password for the next level is stored in a hidden file in the inhere directo
 
 ## Level 4-5
 
+The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.
+
+* Username: bandit5
+* Method for finding password for bandit5:
+	*cmd used: file ~/inhere/-*
+
+* Password: koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+
+## Level 5-6
+
+The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:
+
+    human-readable
+    1033 bytes in size
+    not executable
+
+* Username: bandiit6
+* Method for finding password for bandit6:
+        *cmd used: find /home/bandit5/inhere/ -type f -size 1033c
+
+* Password: DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+
+## Level 6-7
+
+The password for the next level is stored somewhere on the server and has all of the following properties:
+
+    owned by user bandit7
+    owned by group bandit6
+    33 bytes in size
+
+* Username: bandiit7
+* Method for finding password for bandit7:
+        *cmd used: find / -user bandit7 -group bandit6 -type f -size 33c
+
+* Password: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+
+## Level 7-8
+
+The password for the next level is stored in the file data.txt next to the word millionth
+
+* Username: bandiit8
+* Method for finding password for bandit8:
+        *cmd used: cat data.txt | grep "millionth"
+
+* Password: cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+
+## Level 8-9
+
+The password for the next level is stored in the file data.txt and is the only line of text that occurs only once
+
 
