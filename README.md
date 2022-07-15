@@ -141,6 +141,48 @@ The password for the next level is stored in the file data.txt, where all lowerc
 
 * Password: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 
+## Level 12-13
+
+The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work using mkdir. For example: mkdir /tmp/myname123. Then copy the datafile using cp, and rename it using mv (read the manpages!)
+
+* Username: bandit13
+* Method for finding password for bandit13:
+	* cmd used:
+		* xxd -r data.txt > data1
+		* file data => gzip
+		* mv data1 data1.gz
+		* gunzip -d data1.gz 
+		* file data1 => bzip2
+		* mv data1 data2.bz2
+		* bunzip2 -d data1.bz2 > data1
+		* file data1 => gzip
+		* mv data1 data1.gz
+		* gunzip -d data1.gz
+		* file data1 => tar archive
+		* tar xvf data1 => data5.bin
+		* file data5.bin => tar archive
+		* tar xvf data5.bin => data6.bin
+		* file data6.bin => bzip2
+		* mv data6.bin data1.bz2
+		* bunzip -d data2.bz2
+		* file data2 => tar archive
+		* tar xvf data2 => data8.bin
+		* file data8.bin => gzip
+		* mv data8.bin data3.gz
+		* gunzip  -d data3.gz
+		* file data3 => Ascii Text
+		* cat data3 => Password for bandit13
+
+* Password: 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+
+
+
+
+
+
+
+
+
 
 
 
