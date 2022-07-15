@@ -196,10 +196,37 @@ The password for the next level can be retrieved by submitting the password of t
 * Username: bandit15
 * Method for finding passowrd bandit15:
 	* cmd used: 
-		* cat /etc/bandit_pass/bandit14 => to get password for the current level(4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e)
+		* cat /etc/bandit_pass/bandit14 => to get password for the current level 14(4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e)
 		* telnet localhost 30000 => Enter current level password => password for bandit15.
 	
 * Password:  BfMYroe26WYalil77FoDi9qh59eK5xNr
+
+## Level 15-16
+
+The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL encryption.
+
+* Username: bandit16
+* Method for finding password bandit16:
+	* cmd used: 
+		* openssl s_client -connect localhost:30001
+		* To get password for bandit16,Enter the current user bandit15 password in the openssl session.
+
+* Password: cluFn7wTiGryunymYOu4RcffSxQluehd
+
+## Level 16-17
+
+The credentials for the next level can be retrieved by submitting the password of the current level to a port on localhost in the range 31000 to 32000. First find out which of these ports have a server listening on them. Then find out which of those speak SSL and which don’t. There is only 1 server that will give the next credentials, the others will simply send back to you whatever you send to it.
+
+* Username: bandit17
+* Method for finding password bandit17:
+	* cmd used: 
+		* first ssh into the machine using ssh -p 2220 bandit16@bandit.labs.overthewire.org
+		* Then scan using nmap for 31000 to 32000 ports => nmap -p 31000-32000 localhost 
+		* Connect openssl connection for open ports, see which port is open
+			* connect using openssl for the open ports => openssl s_client -connect localhost:<open port>
+			* In our case 31691 is our port which gives the id_rsa key for the bandit17 user.
+
+* Password: No password , we use id_rsa to login bandit17.
 
 
 
