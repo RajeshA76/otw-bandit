@@ -56,7 +56,7 @@ The password for the next level is stored in the only human-readable file in the
 
 * Username: bandit5
 * Method for finding password for bandit5:
-	*cmd used: file ~/inhere/* 
+	* cmd used: file ~/inhere/* 
 * Password: koReBOKuIDDepwhWk7jZC0RTdopnAYKh
 
 ## Level 5-6
@@ -109,7 +109,7 @@ The password for the next level is stored in the file data.txt and is the only l
 		* apply uniq -c to count the no of times line of text occurs in the file
 		* Using Grep to filter out count 1 
 
-* Password: 
+* Password: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR 
 
 ## Level 9-10
 
@@ -137,7 +137,7 @@ The password for the next level is stored in the file data.txt, where all lowerc
 
 * Username: bandit12
 * Method for finding password for bandit12:
-	* cmd used:
+	* cmd used: cat data.txt | tr "A-Za-z" "N-ZA-Mn-za-m"
 
 * Password: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 
