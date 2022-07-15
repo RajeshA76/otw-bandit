@@ -109,6 +109,40 @@ The password for the next level is stored in the file data.txt and is the only l
 		* apply uniq -c to count the no of times line of text occurs in the file
 		* Using Grep to filter out count 1 
 
-* Password: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+* Password: 
+
+## Level 9-10
+
+The password for the next level is stored in the file data.txt in one of the few human-readable strings, preceded by several ‘=’ characters.
+
+* Username: bandit10
+* Method for finding password for bandit10:
+	* cmd used: strings data.txt | grep "==="
+
+* Password: truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+
+## Level 10-11
+
+The password for the next level is stored in the file data.txt, which contains base64 encoded data
+
+* Username: bandit11
+* Method for finding password for bandit11:
+	* cmd used: cat data.txt | base64 -d
+
+* Password: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR 
+
+## Level 11-12
+
+The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
+
+* Username: bandit12
+* Method for finding password for bandit12:
+	* cmd used:
+
+* Password: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+
+
+
+
 
 
