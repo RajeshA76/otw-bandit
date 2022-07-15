@@ -189,6 +189,20 @@ The password for the next level is stored in /etc/bandit_pass/bandit14 and can o
 * Password:  No password for this task , we use id_rsa to login bandit14
 
 
+## Level 14-15
+
+The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost.
+
+* Username: bandit15
+* Method for finding passowrd bandit15:
+	* cmd used: 
+		* cat /etc/bandit_pass/bandit14 => to get password for the current level(4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e)
+		* telnet localhost 30000 => Enter current level password => password for bandit15.
+	
+* Password:  BfMYroe26WYalil77FoDi9qh59eK5xNr
+
+
+
 
 
 
