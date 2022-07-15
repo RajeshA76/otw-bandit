@@ -176,7 +176,17 @@ The password for the next level is stored in the file data.txt, which is a hexdu
 * Password: 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 
 
+## Level 13-14
 
+The password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. Note: localhost is a hostname that refers to the machine you are working on
+
+* Username: bandit14
+* Method for finding passowrd bandit14:
+	* cmd used: cat sshkey.private 
+	* Explanation:
+		* The file has read only permission to bandit13 , we can read the file and copy the text and paste in to another file in our computer as id_rsa with permission 400 .
+
+* Password:  No password for this task , we use id_rsa to login bandit14
 
 
 
