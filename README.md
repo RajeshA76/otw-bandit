@@ -228,6 +228,39 @@ The credentials for the next level can be retrieved by submitting the password o
 
 * Password: No password , we use id_rsa to login bandit17.
 
+## Level 17-18
+
+There are 2 files in the homedirectory: passwords.old and passwords.new. The password for the next level is in passwords.new and is the only line that has been changed between passwords.old and passwords.new
+
+* Username: bandit18
+* Method for finding password bandit18:
+	* cmd used: diff password.new password.old
+
+* Password: kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+
+## Level 18-19
+
+The password for the next level is stored in a file readme in the homedirectory. Unfortunately, someone has modified .bashrc to log you out when you log in with SSH.
+
+* Username: bandit19
+* Method for finding password bandit19:
+	* cmd used: scp -P 2220 bandit18@bandit.labs.overthewire.org:readme .
+	* Explanation:
+		* When you try to login through ssh, It will log you out instantly.
+		* So, we use scp command to copy the readme file in to local machine and get the password
+
+* Password: IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+
+## Level 19-20
+
+
+
+
+
+
+
+
+
 
 
 
